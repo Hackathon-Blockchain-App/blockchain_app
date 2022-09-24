@@ -5,8 +5,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController mailController = new TextEditingController();
-  TextEditingController passController = new TextEditingController();
+  TextEditingController mailController = TextEditingController();
+  TextEditingController passController = TextEditingController();
   bool _validateMail = false;
   bool _validatePass = false;
 
@@ -14,16 +14,16 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     // final AuthBloc bloc = BlocProvider.of<AuthBloc>(context);
     return Scaffold(
-      backgroundColor: Color.fromRGBO(245, 245, 245, 1),
+      backgroundColor: const Color.fromRGBO(240, 241, 245, 1),
       body: Column(
         children: [
-          Spacer(flex: 2),
+          const Spacer(flex: 2),
           Container(
-            height: 270,
+            height: 284,
             width: 340,
             decoration: BoxDecoration(
               color: Colors.white,
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Color.fromRGBO(16, 24, 40, 0.15),
                   blurRadius: 5,
@@ -44,12 +44,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     print('object');
                     // return bloc.inEvent.add(OnClickCreate());
                   },
-                  child: Align(
+                  child: const Align(
                     alignment: Alignment.topLeft,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 16.0, left: 10),
+                      padding: EdgeInsets.only(top: 16.0, left: 10),
                       child: Text(
-                        'Sign In',
+                        'Sign in',
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
@@ -59,12 +59,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(10, 12, 10, 0),
+                  padding: const EdgeInsets.fromLTRB(10, 12, 10, 0),
                   child: Column(
                     children: [
-                      Align(
+                      const Align(
                         alignment: Alignment.topLeft,
-                        child: const Text(
+                        child: Text(
                           "Seed",
                           style: TextStyle(
                               color: Colors.black,
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           autofocus: true,
                           decoration: InputDecoration(
                             hintText: 'Enter your seed',
-                            errorText: _validateMail ? 'Incorrect Seed' : null,
+                            errorText: _validateMail ? 'Incorrect seed' : null,
                             focusedErrorBorder: _validateMail
                                 ? const OutlineInputBorder(
                                     borderSide: BorderSide(color: Colors.red),
@@ -130,7 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           decoration: InputDecoration(
                             hintText: 'Enter password',
                             errorText:
-                                _validatePass ? 'Incorrect Password' : null,
+                                _validatePass ? 'Incorrect password' : null,
                             focusedErrorBorder: _validatePass
                                 ? const OutlineInputBorder(
                                     borderSide:
@@ -167,7 +167,7 @@ class _LoginScreenState extends State<LoginScreen> {
             flex: 4,
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 77.0, left: 16, right: 16),
+            padding: const EdgeInsets.only(bottom: 75.0, left: 16, right: 16),
             child: GestureDetector(
               onTap: () {
                 if (mailController.text.isEmpty &&
@@ -202,6 +202,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
+              
             ),
           ),
         ],
