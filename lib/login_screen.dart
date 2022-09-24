@@ -186,9 +186,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 }
               },
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: GestureDetector(
-                  onTap: () {},
                   child: Container(
                     height: 48,
                     color: Colors.black,
@@ -200,7 +197,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.w600)),
                     ),
                   ),
-                ),
               ),
             ),
           ),
