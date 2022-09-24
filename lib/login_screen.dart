@@ -31,10 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ],
               // color: Colors.black,
-              border: Border.all(
-                width: 0,
-                color: Colors.white
-              ),
+              border: Border.all(width: 0, color: Colors.white),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Column(
@@ -190,19 +187,21 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
-                child: Container(
-                  height: 48,
-                  color: Colors.black,
-                  child: const Center(
-                    child: Text('Sign In',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600)),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    height: 48,
+                    color: Colors.black,
+                    child: const Center(
+                      child: Text('Sign In',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600)),
+                    ),
                   ),
                 ),
               ),
-              
             ),
           ),
         ],
